@@ -14,8 +14,8 @@ class ApiError extends Error {
      this.errors = errors; // Array of specific error details
 
      // Custom stack trace handling
-     if (statck) {
-       this.stack = statck; // If a stack trace is provided, use it
+     if (stack) {
+       this.stack = stack; // If a stack trace is provided, use it
      } else {
        Error.captureStackTrace(this, this.constructor); // Otherwise, generate one automatically
      }
