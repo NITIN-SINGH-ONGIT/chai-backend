@@ -16,7 +16,10 @@ const uploadOnCloudinary = async (localFilePath) =>{
             resource_type: "auto" //  Automatically detects file type (image, video, etc.).
         })
         // file has been uploaded successfull
-        console.log("file is uploaded on cloudinary",responce.url)
+        // console.log("file is uploaded on cloudinary",responce.url)
+
+        // unlink (delete) file after upload
+        fs.unlinkSync(localFilePath)
         return responce;
         
     } 
@@ -27,4 +30,4 @@ const uploadOnCloudinary = async (localFilePath) =>{
     }
 }
 
-export default uploadOnCloudinary;
+export {uploadOnCloudinary};
