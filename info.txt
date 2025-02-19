@@ -1,0 +1,5 @@
+what is file base routing in next ?
+==> we need to make a folder in app folder and in that we can create page.js 
+==> http://localhost:3000/contact we can reach contact page with this
+
+
